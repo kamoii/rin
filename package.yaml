@@ -30,6 +30,7 @@ dependencies:
 - http-types
 - optparse-applicative
 - case-insensitive
+- chronos
 
 library:
   source-dirs: src
