@@ -43,7 +43,7 @@ opt = O.option O.auto
 
 opts = O.info (opt <**> O.helper)
   $ O.fullDesc
-  <> O.header "rin - HTTP/HTTPS server for dev/debug"
+  <> O.header "rin - HTTP server for dev/debug"
 
 -- e.g. 2019-08-17T03:33:51.99+0900
 encodeTime :: Ch.Time -> Text
