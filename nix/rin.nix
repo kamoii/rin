@@ -58,10 +58,14 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
         depends = [
           (hsPkgs."base" or (buildDepError "base"))
           (hsPkgs."bytestring" or (buildDepError "bytestring"))
+          (hsPkgs."case-insensitive" or (buildDepError "case-insensitive"))
+          (hsPkgs."chronos" or (buildDepError "chronos"))
           (hsPkgs."http-types" or (buildDepError "http-types"))
+          (hsPkgs."optparse-applicative" or (buildDepError "optparse-applicative"))
           (hsPkgs."relude" or (buildDepError "relude"))
           (hsPkgs."text" or (buildDepError "text"))
           (hsPkgs."wai" or (buildDepError "wai"))
+          (hsPkgs."wai-extra" or (buildDepError "wai-extra"))
           (hsPkgs."warp" or (buildDepError "warp"))
           ];
         };
@@ -70,11 +74,15 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
           depends = [
             (hsPkgs."base" or (buildDepError "base"))
             (hsPkgs."bytestring" or (buildDepError "bytestring"))
+            (hsPkgs."case-insensitive" or (buildDepError "case-insensitive"))
+            (hsPkgs."chronos" or (buildDepError "chronos"))
             (hsPkgs."http-types" or (buildDepError "http-types"))
+            (hsPkgs."optparse-applicative" or (buildDepError "optparse-applicative"))
             (hsPkgs."relude" or (buildDepError "relude"))
             (hsPkgs."rin" or (buildDepError "rin"))
             (hsPkgs."text" or (buildDepError "text"))
             (hsPkgs."wai" or (buildDepError "wai"))
+            (hsPkgs."wai-extra" or (buildDepError "wai-extra"))
             (hsPkgs."warp" or (buildDepError "warp"))
             ];
           };
@@ -84,11 +92,15 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
           depends = [
             (hsPkgs."base" or (buildDepError "base"))
             (hsPkgs."bytestring" or (buildDepError "bytestring"))
+            (hsPkgs."case-insensitive" or (buildDepError "case-insensitive"))
+            (hsPkgs."chronos" or (buildDepError "chronos"))
             (hsPkgs."http-types" or (buildDepError "http-types"))
+            (hsPkgs."optparse-applicative" or (buildDepError "optparse-applicative"))
             (hsPkgs."relude" or (buildDepError "relude"))
             (hsPkgs."rin" or (buildDepError "rin"))
             (hsPkgs."text" or (buildDepError "text"))
             (hsPkgs."wai" or (buildDepError "wai"))
+            (hsPkgs."wai-extra" or (buildDepError "wai-extra"))
             (hsPkgs."warp" or (buildDepError "warp"))
             ];
           };
