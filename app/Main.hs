@@ -8,7 +8,6 @@ import qualified Chronos as Ch
 import qualified Data.CaseInsensitive as CI
 import qualified Network.HTTP.Types as H
 import qualified Network.Wai as W
-import qualified Network.Wai.Middleware.RequestLogger as WM
 import qualified Options.Applicative as O
 import qualified Network.Wai.Handler.Warp as Warp
 
@@ -18,7 +17,7 @@ main = do
   putTextLn $ "Listen on port: " <> show port
   Warp.run port
     . reqLogMiddleware
-    $ \req respond -> respond $ W.responseLBS H.status200 [] ""
+    $ \_req respond -> respond $ W.responseLBS H.status200 [] ""
 
 -- TODO: pretty printer / color
 -- query
@@ -41,6 +40,7 @@ opt = O.option O.auto
   <> O.help "Port number"
   <> O.metavar "PORT"
 
+opts :: O.ParserInfo Int
 opts = O.info (opt <**> O.helper)
   $ O.fullDesc
   <> O.header "rin - HTTP server for dev/debug"
